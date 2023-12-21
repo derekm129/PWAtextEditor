@@ -47,15 +47,16 @@ module.exports = () => {
           },
         ],
       }),
+      // MiniCSS plugin
       new MiniCssExtractPlugin(),
-      new WorkboxPlugin.GenerateSW(),
     ],
 
     module: {
+      // CSS loaders
       rules: [
         {
           test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+          use: ['style-loader', 'css-loader'],
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -63,7 +64,8 @@ module.exports = () => {
         },
         {
           test: /\.m?js$/,
-          exclude: /(node_modules|bower_components)/,
+          exclude: /node_modules/,
+          // Babel
           use: {
             loader: 'babel-loader',
             options: {
