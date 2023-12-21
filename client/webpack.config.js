@@ -23,6 +23,8 @@ module.exports = () => {
         template: './index.html',
         title: 'Webpack Plugin',
       }),
+         // MiniCSS plugin
+      new MiniCssExtractPlugin(),
         // Injects our custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -47,8 +49,7 @@ module.exports = () => {
           },
         ],
       }),
-      // MiniCSS plugin
-      new MiniCssExtractPlugin(),
+   
     ],
 
     module: {
