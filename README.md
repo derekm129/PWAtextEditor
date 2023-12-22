@@ -6,7 +6,7 @@
 - I learned from making this application how to use webpack and service workers.
 
 ## Installation
-- N/A
+- Enter 'npm install' then 'npm run start' to get the application started.
 
 ## Usage
 - This app runs in the browser and offline.
